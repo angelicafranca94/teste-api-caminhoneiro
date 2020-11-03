@@ -1,0 +1,160 @@
+API CAMINHONEIRO 
+
+==========================================================================================
+
+A API CAMINHONEIRO é baseada nos princípios REST e os dados são acessados pelo padrão HTTP 
+e retornam em um objeto JSON. Utilizamos quatro desses métodos, sendo eles: GET, POST, PUT 
+e DELETE. Abaixo segue mais alguns detalhes e significados interessantes saber de se saber 
+antes de começar a utilizar as APIs.
+
+==========================================================================================
+
+REQUISIÇÕES:
+
+Para acessar as informações do nosso banco de dados, existe quatro meios, os quais são 
+listados abaixo. Cada um tem uma função específica diferente e através desses métodos, 
+todos os possíveis objetivos podem ser alcançados.
+
+GET: Recupera um objeto.
+POST: Cria objeto.
+PUT: Altera um objeto.
+DELETE: Apaga um objeto.
+
+==========================================================================================
+
+REQUEST BODY:
+
+Os campos de Request body (corpo da requisição), são utilizados nos métodos de Post e Put 
+para criar e alterar objetos, respectivamente. Nesse campo, você escreverá uma representação 
+dos novos dados que serão registrados. Deve ser escrito com a semântica de JSON.
+No campo de Example Value, dentro do Request body você será apresentado com um exemplo 
+dos campos que você pode enviar, e no botão Schema, você pode visualizar qual o formato 
+em que as variáveis devem ser enviadas, se elas são obrigatórias 
+(indicado pelos asteriscos vermelhos) e alguma observação, se houver.
+
+==========================================================================================
+
+CAMINHONEIRO - serve para manipular os dados dos caminhoneiros (Codigo, Nome, Endereço e Caminhoes).
+
+POST/api/caminhoneiro - Cadastra o caminhoneiro.
+
+Parâmetros: Sem parâmetros .
+
+Request Body - application/json
+
+Definição dos fields:
+Codigo: Valor numérico inteiro que representa o id de cadastro do caminhoneiro no sistema(int).
+Nome: Nome do caminhoneiro(string).
+UltimoNome: Ultimo nome do caminhoneiro(string).
+Endereço: Endereço completo do caminhoneiro(string).
+
+------------------------------------------------------------------------------------------------
+
+GET/api/caminhoneiro - Retorna a listagem de caminhoneiros cadastrados.
+
+Parâmetros: Sem parâmetros.
+
+-----------------------------------------------------------------------------------------------
+
+GET/api/caminhoneiro/{codigo} - Retorna dados do caminhonheiro selecionado via parametro.
+
+Parâmetros: codigo - Valor numérico inteiro que representa o id de cadastro do caminhoneiro no sistema(int).
+
+------------------------------------------------------------------------------------------------
+
+GET/api/orderby_nome_caminhoneiro - Retorna a listagem de caminhoneiros organizados em ordem alfabética 
+a partir do primeiro nome.
+
+Parâmetros: Sem parâmetros. 
+
+-----------------------------------------------------------------------------------------------
+
+GET/api/orderby_sobrenome_caminhoneiro - Retorna a listagem de caminhoneiros organizados em ordem alfabética 
+a partir do último nome.
+
+Parâmetros: Sem parâmetros. 
+
+-----------------------------------------------------------------------------------------------
+
+PUT/api/caminhoneiro - Altera os dados cadastrados do caminhoneiro.
+
+Parâmetros: Sem parâmetros. 
+
+Request Body - application/json
+
+Definição dos fields:
+Codigo: Valor numérico inteiro que representa o id de cadastro do caminhoneiro no sistema que deve ser alterado(int).
+Nome: Nome do caminhoneiro(string).
+UltimoNome: Ultimo nome do caminhoneiro(string).
+Endereço: Endereço completo do caminhoneiro(string).
+
+------------------------------------------------------------------------------------------------
+
+DELETE/api/caminhoneiro/{codigo} - Deleta caminhonheiro selecionado via parametro.
+
+Parâmetros: codigo - Valor numérico inteiro que representa o id de cadastro do caminhoneiro no sistema(int).
+
+Responses: 200
+
+=================================================================================================
+
+
+CAMINHAO - serve para manipular os dados dos caminhões cadastrados (Codigo, CodigoProprietario, Marca,
+Modelo, Placa, Eixos).
+
+POST/api/caminhao - Cadastra o caminhão.
+
+Parâmetros: Sem parâmetros. 
+
+Request Body - application/json
+
+Definição dos fields:
+Codigo: Valor numérico inteiro que representa o id de cadastro do caminhao no sistema(int).
+CodigoProprietario: Valor numérico inteiro que representa o id de cadastro do caminhoneiro proprietario no sistema(int).
+Marca: Valor texto que descreve a marca do caminhão(string).
+Modelo: Valor texto que descreve o modelo do caminhão(string).
+Placa: Valor texto que descreve a placa do caminhão(string).
+Eixos: Valor numérico inteiro que representa a quantidade de eixos do caminhão(int).
+
+------------------------------------------------------------------------------------------------
+
+GET/api/caminhao - Retorna a listagem de caminhões cadastrados.
+
+Parâmetros: Sem parâmetros 
+
+-----------------------------------------------------------------------------------------------
+
+GET/api/caminhao/{codigo} - Retorna dados do caminhão selecionado via parametro.
+
+Parâmetros: codigo - Valor numérico inteiro que representa o id de cadastro do caminhão no sistema(int).
+
+------------------------------------------------------------------------------------------------
+
+GET/api/caminhaoproprietario/{codigo} - Retorna lista de caminhões cadastrados por proprietario selecionado via parametro
+
+Parâmetros: codigo - Valor numérico inteiro que representa o id de cadastro do caminhoneiro proprietário no sistema(int).
+
+------------------------------------------------------------------------------------------------
+
+PUT/api/caminhao - Altera os dados cadastrados do caminhão.
+
+Parâmetros: Sem parâmetros. 
+
+Request Body - application/json
+
+Definição dos fields:
+Codigo: Valor numérico inteiro que representa o id de cadastro do caminhao no sistema que deve ser alterado(int).
+CodigoProprietario: Valor numérico inteiro que representa o id de cadastro do caminhoneiro proprietario no sistema que deve ser alterado(int).
+Marca: Valor texto que descreve a marca do caminhão(string).
+Modelo: Valor texto que descreve o modelo do caminhão(string).
+Placa: Valor texto que descreve a placa do caminhão(string).
+Eixos: Valor numérico inteiro que representa a quantidade de eixos do caminhão(int).
+
+
+------------------------------------------------------------------------------------------------
+
+DELETE/api/caminhao/{codigo} - Deleta caminhão selecionado via parametro.
+
+Parâmetros: codigo - Valor numérico inteiro que representa o id de cadastro do caminhoneiro no sistema(int).
+
+Responses: 200.

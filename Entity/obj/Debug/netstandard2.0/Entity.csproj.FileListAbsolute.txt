@@ -1,0 +1,9 @@
+C:\TESTES\api_caminhoneiro\Entity\bin\Debug\netstandard2.0\Entity.deps.json
+C:\TESTES\api_caminhoneiro\Entity\bin\Debug\netstandard2.0\Entity.dll
+C:\TESTES\api_caminhoneiro\Entity\bin\Debug\netstandard2.0\Entity.pdb
+C:\TESTES\api_caminhoneiro\Entity\obj\Debug\netstandard2.0\Entity.csprojAssemblyReference.cache
+C:\TESTES\api_caminhoneiro\Entity\obj\Debug\netstandard2.0\Entity.csproj.CoreCompileInputs.cache
+C:\TESTES\api_caminhoneiro\Entity\obj\Debug\netstandard2.0\Entity.AssemblyInfoInputs.cache
+C:\TESTES\api_caminhoneiro\Entity\obj\Debug\netstandard2.0\Entity.AssemblyInfo.cs
+C:\TESTES\api_caminhoneiro\Entity\obj\Debug\netstandard2.0\Entity.dll
+C:\TESTES\api_caminhoneiro\Entity\obj\Debug\netstandard2.0\Entity.pdb
